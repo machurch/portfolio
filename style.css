@@ -51,11 +51,19 @@ form{
   grid-column: 1 / -1;
   gap: 1em;
   label {
+    font: inherit;
     display: grid;
     grid-template-columns: subgrid;
   }
   button {
-    display: grid;
-    grid-template-columns: subgrid;
+    font: inherit;
+    grid-column: 1/-1;
   }
+  input {
+    font: inherit;
+  }
+  textarea {
+    font: inherit;
+  }
+
 }
