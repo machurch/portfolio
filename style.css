@@ -67,3 +67,41 @@ form{
   }
 
 }
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  article {
+    margin-inline: 10px;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+    gap: 1em;
+    h2 {
+      margin: 0;
+    }
+  }
+}
+
+h1 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+h2 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+h3 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+h4 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+h5 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+h6 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
