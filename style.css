@@ -10,6 +10,8 @@ body {
   margin-inline: auto;
   padding: 5ch;
   accent-color: var(--color-accent);
+  background-color: aliceblue;
+  color: #384959;
 }
 
 ul {
@@ -105,3 +107,58 @@ h6 {
   line-height: 1.1;
   text-wrap: balance;
 }
+
+section.resume_text {
+  border-style: solid; 
+  border-width: 7px;
+  border-color: black;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: white;
+  color: black;
+  p.summary {
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+  article.education {
+    text-align: left;
+    margin: 20px;
+    ul {
+      display: block;
+      li {
+        display: block;
+      }
+    }
+  }
+  article.work_experience {
+    text-align: left;
+    margin: 20px;
+    ul {
+      display: block;
+      li {
+        display: block;
+      }
+    }
+  }
+  article.food_coop {
+    text-align: left;
+    margin: 20px;
+    ul {
+      display: block;
+      li {
+        display: block;
+      }
+    }
+  }
+  article.tech_skills {
+    text-align: left;
+    margin: 20px;
+    ul {
+      display: block;
+      li {
+        display: block;
+      }
+    }
+  }
+}
+
