@@ -58,12 +58,14 @@ for (let p of pages) {
   select.addEventListener('input', function (event) {
     console.log('color scheme changed to', event.target.value);
     document.documentElement.style.setProperty('color-scheme', event.target.value);
-
     localStorage.colorScheme = event.target.value;
-
-    if (localStorage.colorScheme) {
-      document.documentElement.style.setProperty('color-scheme', event.target.value);
-      select.value = localStorage.colorScheme;
-    }
   });
+
+  if ("colorScheme" in localStorage) {
+    const theme = localStorage.colorScheme;
+    document.documentElement.style.setProperty('color-scheme', theme);
+    select.value = theme;
+  }
+
+
 
