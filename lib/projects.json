@@ -2,7 +2,7 @@
     {
         "title": "Weather Patterns of San Diego and Miami",
         "year": "2025",
-        "image": "../images/106project1image.png",
+        "image": "/portfolio/images/106project1image.png",
         "description": "The goal of this project was to create an exploratory data visualization. The dataset contained weather statistics from cities in the United States. My project analyzed the differences between amounts of sun and rain received throughout the year in San Diego and Miami."
     },
     {
