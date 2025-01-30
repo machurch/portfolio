@@ -2,37 +2,37 @@
     {
         "title": "Weather Patterns of San Diego and Miami",
         "year": "2025",
-        "image": "/portfolio/images/106project1image.png",
+        "image": "/images/106project1image.png",
         "description": "The goal of this project was to create an exploratory data visualization. The dataset contained weather statistics from cities in the United States. My project analyzed the differences between amounts of sun and rain received throughout the year in San Diego and Miami."
     },
     {
         "title": "Cooking Time Analysis",
         "year": "2024",
-        "image": "../images/80finalproject.png",
+        "image": "/images/80finalproject.png",
         "description": "This was my final project for DSC 80 at UCSD. I analyzed a dataset of recipes to see what affected the amount of time a recipe would take. I considered factors such as number of ingredients, month the recipe was posted in, and the day of the week it was posted on."
     },
     {
         "title": "UCSD Food Cooperative Sales Analysis",
         "year": "2024",
-        "image": "../images/cooplogo.jpeg",
+        "image": "/images/cooplogo.jpeg",
         "description": "As a member of the food cooperative at UCSD, I wanted to analyze our sales data for the 2023-24 school year to find our most popular recipes. I also looked at what quarter we sold the most food in, what weeks of the quarter performed best, and what days of the week we sold the most food."
     },
     {
         "title": "Variance in the Temperatures of Female Mice",
         "year": "2025",
-        "image": "../images/mouse.png",
+        "image": "/images/mouse.png",
         "description": "Project 2 for DSC 106 at UCSD."
     },
     {
         "title": "Bagel Sales at the Coop",
         "year": "2025",
-        "image": "../images/bagelproject.png",
+        "image": "/images/bagelproject.png",
         "description": "This goal of this project is to monitor the sales of bagels at the UCSD Food Cooperative. We recently acquired a bagel vendor and wanted to see how well the bagels performed. I compared the bagel sales to those of products from other vendors as well as our hot food."
     },
     {
         "title": "Montessori's Presence in the United States",
         "year": "2025",
-        "image": "../images/AMSstates.png",
+        "image": "/images/AMSstates.png",
         "description": "This is a report I worked on at my internship at Y Montessori for our first of many monthly reports. The subject of the first report was the general state of Montessori in the United States, and I gathered and visualized data on where AMI and AMS accredited schools were located."
     },
     {
