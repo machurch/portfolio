@@ -171,3 +171,43 @@ label.color-scheme {
   font-family: inherit;
 }
 
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+
+  overflow: visible;
+}
+
+
+.container {
+  display: flex;
+  flex: 1;
+  gap: 100px;
+  .legend {
+    align-self: start;
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+    gap: 0.5rem; /* Adds spacing between legend items */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 2px solid black; 
+    border-radius: 8px;
+    padding: 12px;
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      .swatch {
+        width: 1em;
+        height: 1em;
+        aspect-ratio: 1 / 1; /* Ensures a perfect square */
+        background-color: var(--color);
+        display: inline-block;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+
