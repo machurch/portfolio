@@ -182,18 +182,24 @@ label.color-scheme {
 .container {
   display: flex;
   flex: 1;
-  gap: 100px;
+  gap: 5vw; /* Uses viewport width for dynamic spacing */
+  justify-content: center; /* Centers content on smaller screens */
+  align-items: flex-start;
+  padding: 2vw; /* Ensures some spacing around */
+  max-width: 90vw; /* Prevents it from getting too wide */
+  margin: auto; /* Centers it horizontally */
+  padding-right: 10px;
   .legend {
-    align-self: start;
-    display: flex;
+    align-self: center;
+    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
     gap: 0.5rem; /* Adds spacing between legend items */
     list-style: none;
-    padding: 0;
-    margin: 0;
-    border: 2px solid black; 
-    border-radius: 8px;
     padding: 12px;
+    margin: 0;
+    border: 1px solid black; 
+    border-radius: 8px;
+    width: 100%;
     li {
       display: flex;
       align-items: center;
@@ -209,5 +215,42 @@ label.color-scheme {
     }
   }
 }
+
+.searchBar {
+  width: 100%; /* Make it take up full width of its container */
+  max-width: 800px; /* Set a max width to match other elements */
+  height: 3rem; /* Increase height */
+  padding: 0.75rem 1rem; /* Add padding for better spacing */
+  font-size: 1rem; /* Increase text size */
+  border: 2px solid #ccc; /* Subtle border */
+  border-radius: 8px; /* Slightly rounded corners */
+  outline: none; /* Remove default focus outline */
+  transition: border-color 0.2s ease-in-out;
+  display: block; /* Ensures proper spacing */
+  margin: 1rem auto; /* Centers it on the page */
+}
+
+&:has(path:hover) {
+  path:not(:hover) {
+    opacity: 0.5;
+  }
+}
+path {
+  transition: 300ms;
+}
+
+.selected {
+  --color: oklch(67.06% 0.2664 33.88) !important;
+
+  &:is(path) {
+    fill: var(--color);
+  }
+}
+
+path {
+  cursor: pointer;
+}
+
+
 
 
