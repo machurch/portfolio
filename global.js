@@ -16,6 +16,7 @@ let pages = [
   { url: '', title: 'Home' },
   { url: 'projects/index.html', title: 'Projects' },
   {url: 'resume/index.html', title: 'Resume' },
+  {url: 'meta/index.html', title: 'Meta'},
   {url: 'contact/index.html', title: 'Contact'},
   {url: 'https://github.com/machurch', title: 'GitHub'}
 ];
