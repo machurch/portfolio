@@ -251,6 +251,23 @@ path {
   cursor: pointer;
 }
 
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+  grid-template-rows: auto auto; /* Two rows: one for dt, one for dd */
+  gap: 8px 16px; /* Optional: spacing */
+  text-align: center;
+  dt {
+    grid-row: 1; /* All <dt> elements go to row 1 */
+    font-weight: bold;
+  }
+  dd {
+    grid-row: 2; /* All <dd> elements go to row 2 */
+    margin: 0; /* Remove default margin */
+  }
+}
+
+
 
 
 
