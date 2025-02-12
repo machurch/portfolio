@@ -170,4 +170,26 @@ function createScatterplot() {
     .attr('cy', (d) => yScale(d.hourFrac))
     .attr('r', 5)
     .attr('fill', 'steelblue');
+
+    dots
+      .on('mouseenter', (event, commit) => {
+        updateTooltipContent(commit);
+    })
+    .on('mouseleave', () => {
+      updateTooltipContent({}); // Clear tooltip content
+    });
 }
+
+//update tooltip content
+function updateTooltipContent(commit) {
+    const link = document.getElementById('commit-link');
+    const date = document.getElementById('commit-date');
+  
+    if (Object.keys(commit).length === 0) return;
+  
+    link.href = commit.url;
+    link.textContent = commit.id;
+    date.textContent = commit.datetime?.toLocaleString('en', {
+      dateStyle: 'full',
+    });
+  }
