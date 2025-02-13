@@ -282,19 +282,23 @@ dl.info dt {
   font-weight: normal;
   color: #666; /* Less prominent label */
   margin: 0;
+  grid-row: 1;
 }
 
 dl.info dd {
   font-weight: bold;
   margin: 0;
+  grid-row: 2;
 }
 
 .tooltip {
   position: fixed;
   top: 1em;
   left: 1em;
-  background: rgba(0, 0, 0, 0.75);
-  color: white;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 5px 5px 5px grey;
+  backdrop-filter: blur(10px);
+  border-color: black;
   padding: 0.5em 1em;
   border-radius: 5px;
   font-size: 0.9em;
@@ -308,6 +312,17 @@ circle {
 
 circle:hover {
   transform: scale(1.5);
+}
+
+dl.info {
+  /* ... other styles ... */
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
 }
 
 
