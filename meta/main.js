@@ -98,6 +98,17 @@ function displayStats() {
 
     dl.append('dt').text('Most Common Time');
     dl.append('dd').text(maxPeriod);
+
+    const weekdays = d3.rollups(
+      data,
+      (v) => v.length,
+      (d) => new Date(d.datetime).toLocaleString('en', { weekday: 'long' })
+    )
+
+    const maxDay = d3.greatest(weekdays, (d) => d[1])?.[0];
+
+    dl.append('dt').text('Most Common Day');
+    dl.append('dd').text(maxDay);
   }
 
 let xScale = '';
@@ -138,13 +149,37 @@ function createScatterplot() {
       yScale.range([usableArea.bottom, usableArea.top]);
 
     // Add gridlines BEFORE the axes
+    // const gridlines = svg
+    //     .append('g')
+    //     .attr('class', 'gridlines')
+    //      .attr('transform', `translate(${usableArea.left}, 0)`);
+
+    // add color to gridlines
     const gridlines = svg
         .append('g')
         .attr('class', 'gridlines')
-         .attr('transform', `translate(${usableArea.left}, 0)`);
+       .attr('transform', `translate(${usableArea.left}, 0)`);
 
-    // Create gridlines as an axis with no labels and full-width ticks
-    gridlines.call(d3.axisLeft(yScale).tickFormat('').tickSize(-usableArea.width));
+      // Get tick values for the yScale
+      const yTicks = yScale.ticks();
+
+      // Create a color scale from orange to blue
+      const colorScale = d3.scaleSequential(d3.interpolateRgb("#415A77", "#FF9F1C"))
+        .domain([d3.min(yTicks), d3.max(yTicks)]);
+
+      // Apply axis to create gridlines (but do not duplicate)
+      gridlines.call(d3.axisLeft(yScale).tickFormat('').tickSize(-usableArea.width));
+
+      // Select existing gridline elements and apply color
+      gridlines.selectAll('line')
+        .attr('stroke', d => colorScale(d))  // Apply color scale
+        .attr('stroke-width', 1)
+        .attr('opacity', 0.7);
+
+
+
+
+
 
       // Create the axes
     const xAxis = d3.axisBottom(xScale);
@@ -182,7 +217,7 @@ function createScatterplot() {
     .attr('cy', (d) => yScale(d.hourFrac))
     .attr('r', (d) => rScale(d.totalLines))
     .style('fill-opacity', 0.7)
-    .attr('fill', '#415A77')
+    .attr('fill', '#80CED7')
     .on('mouseenter', (event, commit) => {
       updateTooltipContent(commit);
       updateTooltipVisibility(true);
@@ -216,8 +251,6 @@ function updateTooltipContent(commit) {
 
 function updateTooltipVisibility(isVisible) {
   const tooltip = document.getElementById('commit-tooltip');
-  // tooltip.hidden = !isVisible;
-  // trying this
   if (isVisible) {
     tooltip.style.opacity = '1';
     tooltip.style.visibility = 'visible';

@@ -268,7 +268,7 @@ path {
 }
 
 .gridlines {
-  opacity: 0.2;
+  opacity: 0.7;
 }
 
 dl.info {
@@ -294,20 +294,6 @@ dl.info dd {
   font-family: monospace;
 }
 
-/* .tooltip {
-  position: fixed;
-  top: 1em;
-  left: 1em;
-  background: rgba(255, 255, 255, 0.8);
-  box-shadow: 5px 5px 5px grey;
-  backdrop-filter: blur(10px);
-  border-color: black;
-  padding: 0.5em 1em;
-  border-radius: 5px;
-  font-size: 0.9em;
-} */
-
-/* trying this*/
 .tooltip {
   position: fixed;
   top: 1em;
@@ -359,7 +345,7 @@ dl.info[hidden]:not(:hover, :focus-within) {
 }
 
 circle.selected {
-  fill: #80CED7;
+  fill: #EF9CDA;
 }
 
 .stats {
