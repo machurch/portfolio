@@ -276,6 +276,7 @@ dl.info {
   grid-template-columns: auto 1fr;
   gap: 0.5em 1em; /* Adjust spacing */
   font-family: Arial, sans-serif;
+  font-family: monospace;
 }
 
 dl.info dt {
@@ -283,14 +284,30 @@ dl.info dt {
   color: #666; /* Less prominent label */
   margin: 0;
   grid-row: 1;
+  font-family: monospace;
 }
 
 dl.info dd {
   font-weight: bold;
   margin: 0;
   grid-row: 2;
+  font-family: monospace;
 }
 
+/* .tooltip {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 5px 5px 5px grey;
+  backdrop-filter: blur(10px);
+  border-color: black;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  font-size: 0.9em;
+} */
+
+/* trying this*/
 .tooltip {
   position: fixed;
   top: 1em;
@@ -302,6 +319,8 @@ dl.info dd {
   padding: 0.5em 1em;
   border-radius: 5px;
   font-size: 0.9em;
+  opacity: 0; /* Hide tooltip initially */
+  pointer-events: none; /* Prevent tooltip from blocking interactions */
 }
 
 circle {
@@ -323,6 +342,35 @@ dl.info {
 dl.info[hidden]:not(:hover, :focus-within) {
   opacity: 0;
   visibility: hidden;
+}
+
+@keyframes marching-ants {
+  to {
+    stroke-dashoffset: -8; /* 5 + 3 */
+  }
+}
+
+.selection {
+  fill-opacity: 0.1;
+  stroke: black;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 2s linear infinite;
+}
+
+circle.selected {
+  fill: #80CED7;
+}
+
+.stats {
+  font-family: monospace;
+  font-size: 1.3em;
+  /* align-self: center;
+  align-items: center; */
+}
+
+#selection-count {
+  font-family: monospace;
 }
 
 
