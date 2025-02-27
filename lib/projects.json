@@ -1,12 +1,5 @@
 [
     {
-        "title": "Weather Patterns of San Diego and Miami",
-        "year": "2025",
-        "link": "DSC106_project1.pdf",
-        "image": "images/106project1image.png",
-        "description": "The goal of this project was to create an exploratory data visualization. The dataset contained weather statistics from cities in the United States. My project analyzed the differences between amounts of sun and rain received throughout the year in San Diego and Miami."
-    },
-    {
         "title": "Cooking Time Analysis",
         "year": "2024",
         "link": "https://machurch.github.io/CookingTimeAnalysis/",
@@ -46,6 +39,13 @@
         "link": "https://machurch.github.io/bikewatching/",
         "image": "images/bikewatching2.png",
         "description": "This is a project completed for the DSC 106 class at UCSD. It contains an interactive map visualization of bike traffic in the Boston area during different times of the day."
+    },
+    {
+        "title": "Weather Patterns of San Diego and Miami",
+        "year": "2025",
+        "link": "DSC106_project1.pdf",
+        "image": "images/106project1image.png",
+        "description": "The goal of this project was to create an exploratory data visualization. The dataset contained weather statistics from cities in the United States. My project analyzed the differences between amounts of sun and rain received throughout the year in San Diego and Miami."
     },
     {
         "title": "Amet iusto facilis at.",
