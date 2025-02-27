@@ -2,24 +2,28 @@
     {
         "title": "Weather Patterns of San Diego and Miami",
         "year": "2025",
+        "link": "DSC106_project1.pdf",
         "image": "images/106project1image.png",
         "description": "The goal of this project was to create an exploratory data visualization. The dataset contained weather statistics from cities in the United States. My project analyzed the differences between amounts of sun and rain received throughout the year in San Diego and Miami."
     },
     {
         "title": "Cooking Time Analysis",
         "year": "2024",
+        "link": "https://machurch.github.io/CookingTimeAnalysis/",
         "image": "images/80finalproject.png",
         "description": "This was my final project for DSC 80 at UCSD. I analyzed a dataset of recipes to see what affected the amount of time a recipe would take. I considered factors such as number of ingredients, month the recipe was posted in, and the day of the week it was posted on."
     },
     {
         "title": "UCSD Food Cooperative Sales Analysis",
         "year": "2024",
+        "link": "https://machurch.github.io/FoodCoopDataAnalysis/",
         "image": "images/cooplogo.jpeg",
         "description": "As a member of the food cooperative at UCSD, I wanted to analyze our sales data for the 2023-24 school year to find our most popular recipes. I also looked at what quarter we sold the most food in, what weeks of the quarter performed best, and what days of the week we sold the most food."
     },
     {
         "title": "Variance in the Temperatures of Female Mice",
         "year": "2025",
+        "link": "project2.pdf",
         "image": "images/mouse.png",
         "description": "Project 2 for DSC 106 at UCSD."
     },
@@ -32,14 +36,16 @@
     {
         "title": "Montessori's Presence in the United States",
         "year": "2025",
+        "link": "https://isabellacai2.wixstudio.com/website",
         "image": "images/AMSstates.png",
         "description": "This is a report I worked on at my internship at Y Montessori for our first of many monthly reports. The subject of the first report was the general state of Montessori in the United States, and I gathered and visualized data on where AMI and AMS accredited schools were located."
     },
     {
-        "title": "Nisi consequuntur eveniet quisquam.",
-        "year": "2023",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Sequi quisquam asperiores et veritatis tempore repudiandae sunt dolorum, ratione cum repellendus ipsa cupiditate adipisci hic error voluptate fugit rem sapiente velit aut quod eius ex dolore explicabo qui? Quas?"
+        "title": "Bikewatching",
+        "year": "2025",
+        "link": "https://machurch.github.io/bikewatching/",
+        "image": "images/bikewatching2.png",
+        "description": "This is a project completed for the DSC 106 class at UCSD. It contains an interactive map visualization of bike traffic in the Boston area during different times of the day."
     },
     {
         "title": "Amet iusto facilis at.",
