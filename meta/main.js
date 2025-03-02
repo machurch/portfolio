@@ -222,10 +222,12 @@ function createScatterplot() {
       updateTooltipContent(commit);
       updateTooltipVisibility(true);
       updateTooltipPosition(event);
+      d3.select(event.currentTarget).classed('selected', true); // give it a corresponding boolean value
     })
     .on('mouseleave', () => {
       updateTooltipContent({});
       updateTooltipVisibility(false);
+      d3.select(event.currentTarget).classed('selected', false);
     });
 }
 
@@ -275,26 +277,25 @@ function brushSelector() {
 }
 
 let brushSelection = null;
+let selectedCommits = [];
 
-function brushed(event) {
-  brushSelection = event.selection;
-  updateSelection();
-  updateSelectionCount();
-  updateLanguageBreakdown();
+
+function brushed(evt) {
+  let brushSelection = evt.selection;
+  selectedCommits = !brushSelection
+    ? []
+    : commits.filter((commit) => {
+        let min = { x: brushSelection[0][0], y: brushSelection[0][1] };
+        let max = { x: brushSelection[1][0], y: brushSelection[1][1] };
+        let x = xScale(commit.date);
+        let y = yScale(commit.hourFrac);
+
+        return x >= min.x && x <= max.x && y >= min.y && y <= max.y;
+      });
 }
 
 function isCommitSelected(commit) {
-  if (!brushSelection) {
-    return false;
-  }
-  // TODO: return true if commit is within brushSelection
-  // and false if not
-  const [[x0, y0], [x1, y1]] = brushSelection; // Get brush selection bounds
-
-  const commitX = xScale(commit.datetime); // Map commit datetime to x-scale
-  const commitY = yScale(commit.hourFrac); // Map commit hourFrac to y-scale
-
-  return commitX >= x0 && commitX <= x1 && commitY >= y0 && commitY <= y1;
+  return selectedCommits.includes(commit);
 }
 
 function updateSelection() {
